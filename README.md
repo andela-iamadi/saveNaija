@@ -1,3 +1,2 @@
-# teencode
-
-Official site of #teencode program
+# saveNaija
+Official site of #saveNaija movement
