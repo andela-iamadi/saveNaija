@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 
 const SponsorSection = () =>
-  <section id="sponsor" className="bg-green section sponsored-by">
+  <section id="sponsor" className="bg-lighter-blue section sponsored-by">
     <div className="container">
       <div className="row">
         <div className="col-md-12 text-md-center body-pad">
