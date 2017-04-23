@@ -9,13 +9,13 @@ const VolunteerSection = () =>
           <img src={require('../../../img/yerima.jpg')} className="img-thumbnail picture hidden-xs" />
           <div>
             <h5 className="name">Yerima Fatima</h5>
-            <p className="title">Banker</p>
+            <p className="title">Trader</p>
             <p className="role">SaveNaija volunteer</p>
           </div>
         </div>
         <div className="col-md-9 col-xs-12">
           <div className="header">
-            <h4>Live in a consistently clean environment at no financial cost</h4>
+            <h4>What if you live in a consistently clean environment with neigbors equally conscious of hygiene?</h4>
             <p>SaveNaija helps regular people organize street cleaning campaigns and spread awareness of better hygiene habits.</p>
           </div>
           <div className="offset-md-6 col-md-6 col-xs-12">

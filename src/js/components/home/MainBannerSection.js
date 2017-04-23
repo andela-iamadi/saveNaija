@@ -12,8 +12,8 @@ const MainBannerSection = () =>
           <div className="intro-text">
             <div className="col-md-9 col-xs-12 banner-text">
               <div className="home-content body-pad">
-                <h1><a href="http://www.investopedia.com/articles/personal-finance/072715/10-richest-most-successful-tech-geniuses.asp" target="_blank">
-                  56.7% of all meaningful growth</a> in world economies are driven by ordinary citizens.
+                <h1><a href="http://www.people-press.org/2015/11/23/8-perceptions-of-the-publics-voice-in-government-and-politics/" target="_blank">
+                  56.7% of all societal changes</a> around the world are driven by ordinary people.
                 </h1>
               </div>
             </div>
