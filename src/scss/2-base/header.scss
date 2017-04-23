@@ -1,0 +1,226 @@
+// Custom Navigation Bar
+
+.navbar-custom {
+  background-color: rgb(183, 222, 205);
+  border-color: transparent;
+  border-radius: 0;
+
+  .navbar-brand > img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  &:not(.is-sticky) {
+    .nav {
+      margin-top: 20px;
+    }
+  }
+
+  .navbar-toggler {
+    background-color: $primary-light;
+    border-color: $primary-light;
+    border-radius: 0;
+    color: $gray-light;
+    font-size: 24px;
+    outline: none;
+
+    @include gadgets {
+      margin-top: 6px;
+    }
+
+    &:focus {
+      background-color: $primary-light;
+    }
+
+    &:hover,
+    &[aria-expanded="true"] {
+      background-color: $blue-lighter;
+    }
+  }
+  .navbar-toggleable-sm {
+    text-align: right;
+    clear: right;
+
+    @include gadgets {
+      ul {
+        width: 50%;
+        float: right;
+      }
+    }
+    &.in>.nav {
+      li {
+        a {
+          color: $gray-light;
+          background: rgba(255, 255, 255, 0.2);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        a:hover,
+        a:focus {
+          color: $gray-dark;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  a.nav-link {
+    align-items: center;
+    color: $white;
+    display: flex;
+
+    @include gadgets {
+      color: $gray-light;
+    }
+  }
+
+  .nav {
+    margin-left: 2px;
+
+    li {
+      a.nav-link,
+      a.dropdown-item {
+        @include lato-font;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        color: $white-trans;
+        font-size: 14px;
+        padding: 8px 12px;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          color: white;
+          outline: none;
+        }
+      }
+      
+      a.dropdown-item {
+        &:hover,
+        &:focus{
+          background: transparent;
+        }
+      }
+    }
+  }
+  .navbar-nav>li {
+    &>a.active {
+      border-radius: 0;
+      color: white;
+      .caret {
+        border-color: white;
+      }
+      &:before {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 9px;
+        content: "\2022";
+        font-size: 0.5em;
+        pointer-events: none;
+        color: $orange;
+        text-shadow: 7px 0 $orange, -7px 0 $orange;
+      }
+    }
+    .dropdown-item.active {
+      color: $orange;
+      background-color: $black-trans-light;
+      &:hover,
+      &:focus {
+        background: $black-trans-light;
+      }
+    }
+  }
+}
+
+// sections
+
+//@media(max-width:768px) {
+//  div.body-pad {
+//    padding: 0 30px;
+//  }
+//}
+
+@media(min-width:768px) {
+  .navbar-custom {
+    background-color: transparent;
+    padding: 25px 0 30px;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none;
+    .navbar-brand {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+  }
+}
+
+// Navbar Change on Scroll
+
+@media(min-width:768px) {
+  .navbar-custom.is-sticky {
+    background-color: $dark-green;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .navbar-brand {
+      img {
+        height: 30px;
+        width: auto;
+      }
+    }
+  }
+}
+
+// Navbar dropdown
+.nav-item.dropdown {
+  margin-right: 10px;
+
+  .dropdown-toggle::after {
+    content: initial;
+  }
+
+  .caret {
+    position: absolute;
+    top: 50%;
+    margin-left: 8px;
+    width: 7px;
+    height: 7px;
+    background: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.7);
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    transition: all 200ms ease;
+    
+    &.down {
+      transform: translate3d(0,-50%,0) rotate(135deg);
+    }
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    background-color: $gray-bg;
+    border: none;
+    border-top: 20px solid transparent;
+    border-radius: 0;
+
+    .dropdown-item:hover {
+      background: $black-trans-light;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      border: 8px solid transparent;
+      border-bottom-color: $gray-bg;
+      z-index: 990;
+      left: 8px;
+      bottom: 100%;
+    }
+  }
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+
+  @include mobile {
+    background-color: rgb(183, 222, 205);
+  }
+}
