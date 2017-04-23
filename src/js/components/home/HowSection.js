@@ -16,8 +16,9 @@ const HowSection = () =>
             <div className="service-col">
               <img className="picture" src={require('../../../img/apply.svg')} alt="Apply" />
               <h4 className="service-heading">Apply</h4>
-              <p className="text-muted">When applying, volunteers state upfront what you are willing to do and to what extent. So nobody expects too much from you.
-                <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfYdnwrxPt-di3buJBhFP-BavKuHOQBouE-nGAG1keJSi2aCA/viewform?c=0&w=1" target="_blank"><span className="text-primary">&nbsp;Click here to apply.</span></Link>
+              <p className="text-muted">When applying, you state upfront what you are willing to do and to what extent. So nobody expects too much from you.
+                <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfYdnwrxPt-di3buJBhFP-BavKuHOQBouE-nGAG1keJSi2aCA/viewform?c=0&w=1"
+                      target="_blank"><span className="text-primary"><br />Click here to apply.</span></Link>
               </p>
             </div>
           </div>
@@ -27,14 +28,14 @@ const HowSection = () =>
               <h4 className="service-heading">Initiate</h4>
               <p className="text-muted">Any registered volunteer can
                 <Link to="/partners"><span className="text-primary">&nbsp;propose a cleanup initiative</span></Link> at any location.
-                &nbsp;Once agreed, volunteers around commit to making it a success
+                &nbsp;Once agreed, the #saveNaija group commits to make it a success
               </p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="service-col">
               <img className="picture" src={require('../../../img/mentor.svg')} alt="Mentor" />
-              <h4 className="service-heading">Mentor</h4>
+              <h4 className="service-heading">Respond</h4>
               <p className="text-muted">
                 <Link to="/volunteers" className="text-primary">Volunteers respond to calls</Link>
                 &nbsp; for participation in initiatives as they see fit. <br />This is purely free will.
