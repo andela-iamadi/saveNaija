@@ -1,19 +1,28 @@
+import filesToRead from './filesToCopy';
+
 const fs = require('fs');
 const cheerio = require('cheerio');
 const colors = require('colors');
 
 /*eslint-disable no-console */
 
-fs.readFile('src/index.html', 'utf-8', function (err, markup) {
-  if (err) {
-    return console.log(err);
-  }
-  const $ = cheerio.load(markup);
+filesToRead.forEach(file => {
 
-  fs.writeFile('dist/index.html', $.html(), 'utf-8', function(err) {
+  const dataType = file.isHtml ? 'utf-8' : null
+
+  fs.readFile(file.path, dataType, function (err, markup) {
     if (err) {
       return console.log(err);
     }
-    console.log('index.html written to /dist'.green)
+
+    // const $ = cheerio.load(markup);
+    const data = file.isHtml ? cheerio.load(markup).html() : markup;
+
+    fs.writeFile(`dist/${file.name}`, data, dataType, function(err) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log(`${file.name} written to /dist`.green)
+    })
   })
-})
+});
