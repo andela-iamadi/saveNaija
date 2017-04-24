@@ -55,6 +55,11 @@
     color: $background;
     background-color: $color;
   }
+
+
+  @include gadgets {
+    font-size: 14px;
+  }
 }
 
 @mixin box-shadow($shadow...) {

@@ -6,6 +6,19 @@ footer {
   font-size: 16px;
   color: $gray-light;
   text-decoration: none;
+
+  .row {
+    @include gadgets {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        text-align: center;
+      }
+    }
+  }
   img {
     width: 50px;
     margin-bottom: 3px;

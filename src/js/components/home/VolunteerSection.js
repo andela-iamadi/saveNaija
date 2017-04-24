@@ -15,7 +15,7 @@ const VolunteerSection = () =>
         </div>
         <div className="col-md-9 col-xs-12">
           <div className="header">
-            <h4>What if you live in a consistently clean environment with neigbors equally conscious of hygiene?</h4>
+            <h4>Would you prefer a consistently clean environment with equally clean neigbors?</h4>
             <p>SaveNaija helps regular people organize street cleaning campaigns and spread awareness of better hygiene habits.</p>
           </div>
           <div className="offset-md-6 col-md-6 col-xs-12">
