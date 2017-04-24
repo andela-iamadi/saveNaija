@@ -13,7 +13,7 @@ const MainBannerSection = () =>
             <div className="col-md-9 col-xs-12 banner-text">
               <div className="home-content body-pad">
                 <h1><a href="http://www.people-press.org/2015/11/23/8-perceptions-of-the-publics-voice-in-government-and-politics/" target="_blank">
-                  56.7% of changes in societies</a> around the world are driven by ordinary people.
+                  56.7% of changes in communities</a> around the world are driven by ordinary people.
                 </h1>
               </div>
             </div>
